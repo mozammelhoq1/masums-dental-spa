@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -39,6 +41,13 @@ const NavigationBar = () => {
               className="text-decoration-none fw-bold mx-3 my-2  text-secondary"
             >
               ABOUT ME
+            </Link>
+            <Link
+              to="/login"
+              className="text-decoration-none fw-bold mx-3 my-2  text-dark"
+            >
+              <span className="me-2">LOG IN</span>
+              <FontAwesomeIcon icon={faCircleArrowLeft}></FontAwesomeIcon>
             </Link>
           </Nav>
         </Navbar.Collapse>

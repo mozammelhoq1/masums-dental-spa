@@ -1,8 +1,13 @@
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { name, price, img, description } = service;
+  const { id, name, price, img, description } = service;
+  const navigate = useNavigate();
+  const navigateToCheckOut = (id) => {
+    navigate(`/checkout/${id}`);
+  };
   return (
     <Col>
       <Card className=" h-100">
@@ -11,9 +16,13 @@ const Service = ({ service }) => {
           <h3>{name}</h3>
           <h5>${price}</h5>
           <p>{description}</p>
-          <Button variant="secondary" className="btn btn-sm">
+          <Button
+            onClick={() => navigateToCheckOut(id)}
+            variant="secondary"
+            className="btn btn-sm"
+          >
             {" "}
-            Go to somewhere
+            Appointment Now
           </Button>
         </Card.Body>
       </Card>
