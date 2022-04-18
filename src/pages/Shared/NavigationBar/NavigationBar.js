@@ -15,7 +15,7 @@ const NavigationBar = () => {
       <Container>
         <Navbar.Brand href="#">
           <img height={50} src={logo} alt="" />
-          <span className="text-danger fw-bolder">Dental Spa</span>
+          <span className="text-danger fw-bolder">Masum's Dental Spa</span>
           <br />
           <small>The Dental Experience</small>
         </Navbar.Brand>
