@@ -4,10 +4,10 @@ import about_img from "../../images/about/about.jpg";
 
 const About = () => {
   return (
-    <Container>
-      <Row className="g-5 mx-auto mt-3 align-items-center">
+    <Container className="shadow  mt-5 rounded-3">
+      <Row className="g-5 mx-auto mt-3 pb-5 align-items-center justify-content-center">
         <Col xs={12} sm={12} md={6}>
-          <img className="w-100" src={about_img} alt="" />
+          <img className="w-100 rounded-circle" src={about_img} alt="" />
         </Col>
         <Col xs={12} sm={12} md={6}>
           <h5>
