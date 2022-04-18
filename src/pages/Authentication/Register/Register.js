@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+  const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
 
   const navigateLogin = () => {
@@ -23,8 +25,10 @@ const Register = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-
-    createUserWithEmailAndPassword(email, password);
+    const agree = event.target.terms.checked;
+    if (agree) {
+      createUserWithEmailAndPassword(email, password);
+    }
   };
   return (
     <Container className="w-75 mx-auto">
@@ -60,9 +64,16 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check
+            onClick={() => setAgree(!agree)}
+            name="terms"
+            type="checkbox"
+            className={`fw-normal ${agree ? "" : "text-secondary"}`}
+            label="Accept Terms And Conditions"
+          />
         </Form.Group>
         <Button
+          disabled={!agree}
           className="btn btn-sm w-100 mb-2"
           variant="primary"
           type="submit"
@@ -74,12 +85,13 @@ const Register = () => {
         Already Have An Account?{" "}
         <Link
           to="/login"
-          className="text-danger pe-auto"
+          className="text-primary pe-auto"
           onClick={navigateLogin}
         >
           Please Login
         </Link>
       </p>
+      <SocialLogin />
     </Container>
   );
 };
