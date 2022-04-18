@@ -1,11 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const NavigationBar = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <Navbar
       bg="light"
@@ -42,13 +52,24 @@ const NavigationBar = () => {
             >
               ABOUT ME
             </Link>
-            <Link
-              to="/login"
-              className="text-decoration-none fw-bold mx-3 my-2  text-dark"
-            >
-              <span className="me-2">LOG IN</span>
-              <FontAwesomeIcon icon={faCircleArrowLeft}></FontAwesomeIcon>
-            </Link>
+            {user ? (
+              <Link
+                to="/login"
+                onClick={handleSignOut}
+                className="text-decoration-none fw-bold mx-3 my-2  text-dark"
+              >
+                <span className="me-2">LOG Out</span>
+                <FontAwesomeIcon icon={faCircleArrowRight}></FontAwesomeIcon>
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="text-decoration-none fw-bold mx-3 my-2  text-dark"
+              >
+                <span className="me-2">LOG IN</span>
+                <FontAwesomeIcon icon={faCircleArrowLeft}></FontAwesomeIcon>
+              </Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
