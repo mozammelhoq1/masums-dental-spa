@@ -1,13 +1,10 @@
 import React from "react";
-import { Spinner } from "react-bootstrap";
+import { SpinnerDiamond, SpinnerDotted } from "spinners-react";
 
 const Loading = () => {
   return (
-    <div
-      style={{ height: "200px" }}
-      className="w-100 d-flex justify-content-center align-items-center"
-    >
-      <Spinner animation="grow" variant="primary" />
+    <div className="w-100 d-flex justify-content-center align-items-center my-5">
+      <SpinnerDiamond size={150} color="secondary" speed={100} />
     </div>
   );
 };

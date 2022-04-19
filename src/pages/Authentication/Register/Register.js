@@ -7,7 +7,6 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
-import { async } from "@firebase/util";
 import Loading from "../../Shared/Loading/Loading";
 
 const Register = () => {
