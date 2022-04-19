@@ -1,5 +1,4 @@
-import { async } from "@firebase/util";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import {
   useSendPasswordResetEmail,
@@ -104,7 +103,6 @@ const Login = () => {
         <p>
           Forget Password?{" "}
           <button
-            to="/register"
             className="btn btn-link text-primary pe-auto"
             onClick={resetPassword}
           >

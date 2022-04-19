@@ -1,6 +1,6 @@
-# masums dental spa
+# Masum's Dental Spa
 
-[live site](https://masums-dental-spa.web.app/).
+[Visit Our Site](https://masums-dental-spa.web.app/).
 
 ## feature
 
@@ -18,4 +18,8 @@
 - react-bootstrap
 - react js
 - react toast
+
+* react typical
+* react text animation
+
 - etc.

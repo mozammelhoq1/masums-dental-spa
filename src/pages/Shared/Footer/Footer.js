@@ -41,73 +41,73 @@ const Footer = () => {
         <img className="img-fluid mt-3" src={googlePay} alt="" />
       </Col>
       <Col xs={12} md={4} className="text-start">
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className=" text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Patient Resources</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className=" text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">About Me</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Terms & Conditions</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Success</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Blog</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Connect Me</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Reviews</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Masum,s Dental Spa</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Pay Online</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">FAQs</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Terms & Conditions</span>
         </a>
         <br />
-        <a href="#" className=" text-decoration-none">
+        <a href="#" className="text-decoration-underline text-light">
           {" "}
           <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           <span className="ms-2">Privacy Policy</span>

@@ -3,8 +3,8 @@ import { Col, Container } from "react-bootstrap";
 
 const Blogs = () => {
   return (
-    <Container className="shadow rounded mt-5">
-      <Col className="text-center p-3">
+    <Container className="">
+      <Col className="text-center p-3 shadow rounded-3 mt-5 bg-light">
         <h2>Difference between authorization and authentication.</h2>
         <p>
           Difference between Authorization and Authentication: Authorization is
@@ -17,7 +17,7 @@ const Blogs = () => {
           action in that app.
         </p>
       </Col>
-      <Col className="text-center p-3">
+      <Col className="text-center p-3 shadow rounded-3 mt-5 bg-light">
         <h2>
           {" "}
           Why are you using firebase? What other options do you have to
@@ -35,7 +35,7 @@ const Blogs = () => {
           authentication procedure in any app.
         </p>
       </Col>
-      <Col className="text-center p-3">
+      <Col className="text-center p-3 shadow rounded-3 mt-5 bg-light">
         <h2>
           What other services does firebase provide other than authentication?
         </h2>

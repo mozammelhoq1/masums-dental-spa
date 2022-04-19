@@ -12,15 +12,19 @@ const Service = ({ service }) => {
   };
   return (
     <Col>
-      <Card className=" h-100">
-        <Card.Img className="w-100" variant="top" src={img} />
+      <Card className=" h-100 border-0 shadow rounded-3">
+        <Card.Img
+          className="w-100 rounded-3 shadow-lg"
+          variant="top"
+          src={img}
+        />
         <Card.Body className="d-flex flex-column">
           <h3>{name}</h3>
           <h5>${price}</h5>
           <p>{description}</p>
           <Button
             onClick={() => navigateToCheckOut(id)}
-            variant="secondary"
+            variant="primary"
             className="btn btn-sm mt-auto"
           >
             {" "}

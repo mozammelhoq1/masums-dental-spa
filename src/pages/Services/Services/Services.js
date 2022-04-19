@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Service from "../Service/Service";
+import AnimatedText from "react-animated-text-content";
 /* 
 const services = [
   {
@@ -62,7 +63,25 @@ const Services = () => {
   }, []);
   return (
     <Container className="my-5">
-      <h1 className="my-5 fw-bold text-center">My Popular Services</h1>
+      <AnimatedText
+        type="charts" // animate words or chars
+        animation={{
+          x: "200px",
+          y: "-20px",
+          scale: 1.1,
+          ease: "ease-in-out",
+        }}
+        animationType="diagonal"
+        interval={0.1}
+        duration={1.5}
+        tag="h1"
+        className="animated-paragraph my-5 fw-bold text-center"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+      >
+        My Popular Services
+      </AnimatedText>
       <Row xs={1} md={2} lg={3} xl={4} className="g-4">
         {services.map((service) => (
           <Service key={service.id} service={service}></Service>
