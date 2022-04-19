@@ -6,7 +6,7 @@ import AnimatedText from "react-animated-text-content";
 
 const About = () => {
   return (
-    <Container className="shadow  mt-5 rounded-3">
+    <Container className="shadow  mt-5 rounded-3 bg-light">
       <Row className="g-5 mx-auto mt-3 pb-5 align-items-center justify-content-center">
         <Col xs={12} sm={12} md={6}>
           <img className="w-100 rounded-circle" src={about_img} alt="" />
